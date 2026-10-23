@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@theme {
+  --color-sec: #f0f2f5;
+  --color-main: #001f6b;
+}
+body{
+  background-color: var(--color-sec);
+}
+button:active,
+.dropdown-trigger-btn:active,
+[data-pressed] {
+  transform: none !important;
+  scale: 1 !important;
+}
+[data-focus-visible],
+[data-focused],
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+@layer components {
+  /* Base skeleton styles */
+  .skeleton {
+    @apply bg-gray-200; /* Change base background */
+  }
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
